@@ -6,7 +6,7 @@ app.config(function($routeProvider){
   $routeProvider.
     when('/items/list', {
       templateUrl: 'partials/item-list.html',
-      controller: 'TodoCtrl'
+      controller: 'ItemListCtrl'
     }).
     when('/items/new', {
       templateUrl: 'partials/item-form.html',
