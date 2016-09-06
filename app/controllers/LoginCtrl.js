@@ -21,8 +21,15 @@ app.controller("LoginCtrl", function($scope, $window, AuthFactory){
   $scope.login = () => {
     console.log("you clicked login");
     AuthFactory.loginUser($scope.account)
-    .then( () => {
-      $window.location.href = "#/items/list";
+    .then( (data) => {
+      if (data) {
+        $window.location.href = "#/items/list";
+      } else {
+        $window.location.href = "#/items/login";
+      }
+      console.log("data from login", data);
+    }, (error) => {
+      console.log("Error loggin in man", error);
     });
-  }
+  };
 });

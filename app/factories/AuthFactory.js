@@ -14,7 +14,11 @@ app.factory("AuthFactory", function(){
     .catch(function(error){
       let errorCode = error.code;
       let errorMessage = error.message;
+      console.log("error", errorCode, errorMessage);
     });
   };
-  return {createUser, loginUser};
+  let logoutUser = function(){
+    return firebase.auth().signOut();
+  };
+  return {createUser, loginUser, logoutUser};
 });
