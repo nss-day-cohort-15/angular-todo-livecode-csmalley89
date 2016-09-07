@@ -8,7 +8,7 @@
       <div class="col-xs-1">{{item.assignedTo}}</div>
       <div class="col-xs-1">
         <div class="btn-toolbar" role="toolbar">
-          <div class="btn-group btn-group-xs" role="group"><button class="btn btn-default glyphicon glyphicon-cog" ng-click="itemEdit(item.id)" aria-label="Edit"></button></div>
+          <div class="btn-group btn-group-xs" role="group"><button class="btn btn-default glyphicon glyphicon-cog" ng-href=`#/items/view/{{selectedItem.id}}/edit` aria-label="Edit"></button></div>
           <div class="btn-group btn-group-xs" role="group"><button class="btn btn-default glyphicon glyphicon-trash" ng-click="itemDelete(item.id)" aria-label="Delete"></button></div>
         </div>
       </div>
